@@ -28,37 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            burgerButton = new Button();
+            button0 = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            pizzaButton = new Button();
-            saladButton = new Button();
-            friesButton = new Button();
-            veggiesButton = new Button();
-            appleButton = new Button();
-            sodaButton = new Button();
-            waterButton = new Button();
-            coffeeButton = new Button();
-            cookieButton = new Button();
-            iceButton = new Button();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            button7 = new Button();
+            button6 = new Button();
+            button8 = new Button();
+            button10 = new Button();
+            button9 = new Button();
             curOrder = new ListBox();
             prevOrder = new ListBox();
             checkButton = new Button();
             prevButton = new Button();
+            priceLabel = new Label();
             SuspendLayout();
             // 
-            // burgerButton
+            // button0
             // 
-            burgerButton.Location = new Point(50, 175);
-            burgerButton.Name = "burgerButton";
-            burgerButton.Size = new Size(175, 175);
-            burgerButton.TabIndex = 0;
-            burgerButton.Text = "Burger";
-            burgerButton.UseVisualStyleBackColor = true;
-            burgerButton.Click += label1_Click;
+            button0.Location = new Point(50, 175);
+            button0.Name = "button0";
+            button0.Size = new Size(175, 175);
+            button0.TabIndex = 0;
+            button0.Text = "Burger";
+            button0.UseVisualStyleBackColor = true;
+            button0.Click += label1_Click;
             // 
             // label1
             // 
@@ -110,105 +111,105 @@
             label5.TabIndex = 5;
             label5.Text = "Desserts";
             // 
-            // pizzaButton
+            // button1
             // 
-            pizzaButton.Location = new Point(50, 400);
-            pizzaButton.Name = "pizzaButton";
-            pizzaButton.Size = new Size(175, 175);
-            pizzaButton.TabIndex = 6;
-            pizzaButton.Text = "Pizza";
-            pizzaButton.UseVisualStyleBackColor = true;
-            pizzaButton.Click += label1_Click;
+            button1.Location = new Point(50, 400);
+            button1.Name = "button1";
+            button1.Size = new Size(175, 175);
+            button1.TabIndex = 6;
+            button1.Text = "Pizza";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += label1_Click;
             // 
-            // saladButton
+            // button2
             // 
-            saladButton.Location = new Point(50, 625);
-            saladButton.Name = "saladButton";
-            saladButton.Size = new Size(175, 175);
-            saladButton.TabIndex = 7;
-            saladButton.Text = "Salad";
-            saladButton.UseVisualStyleBackColor = true;
-            saladButton.Click += label1_Click;
+            button2.Location = new Point(50, 625);
+            button2.Name = "button2";
+            button2.Size = new Size(175, 175);
+            button2.TabIndex = 7;
+            button2.Text = "Salad";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += label1_Click;
             // 
-            // friesButton
+            // button3
             // 
-            friesButton.Location = new Point(275, 175);
-            friesButton.Name = "friesButton";
-            friesButton.Size = new Size(175, 175);
-            friesButton.TabIndex = 8;
-            friesButton.Text = "Fries";
-            friesButton.UseVisualStyleBackColor = true;
-            friesButton.Click += label1_Click;
+            button3.Location = new Point(275, 175);
+            button3.Name = "button3";
+            button3.Size = new Size(175, 175);
+            button3.TabIndex = 8;
+            button3.Text = "Fries";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += label1_Click;
             // 
-            // veggiesButton
+            // button4
             // 
-            veggiesButton.Location = new Point(275, 400);
-            veggiesButton.Name = "veggiesButton";
-            veggiesButton.Size = new Size(175, 175);
-            veggiesButton.TabIndex = 9;
-            veggiesButton.Text = "Steamed Veggies";
-            veggiesButton.UseVisualStyleBackColor = true;
-            veggiesButton.Click += label1_Click;
+            button4.Location = new Point(275, 400);
+            button4.Name = "button4";
+            button4.Size = new Size(175, 175);
+            button4.TabIndex = 9;
+            button4.Text = "Steamed Veggies";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += label1_Click;
             // 
-            // appleButton
+            // button5
             // 
-            appleButton.Location = new Point(275, 625);
-            appleButton.Name = "appleButton";
-            appleButton.Size = new Size(175, 175);
-            appleButton.TabIndex = 10;
-            appleButton.Text = "Apple Slices";
-            appleButton.UseVisualStyleBackColor = true;
-            appleButton.Click += label1_Click;
+            button5.Location = new Point(275, 625);
+            button5.Name = "button5";
+            button5.Size = new Size(175, 175);
+            button5.TabIndex = 10;
+            button5.Text = "Apple Slices";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += label1_Click;
             // 
-            // sodaButton
+            // button7
             // 
-            sodaButton.Location = new Point(500, 400);
-            sodaButton.Name = "sodaButton";
-            sodaButton.Size = new Size(175, 175);
-            sodaButton.TabIndex = 12;
-            sodaButton.Text = "Soda";
-            sodaButton.UseVisualStyleBackColor = true;
-            sodaButton.Click += label1_Click;
+            button7.Location = new Point(500, 400);
+            button7.Name = "button7";
+            button7.Size = new Size(175, 175);
+            button7.TabIndex = 12;
+            button7.Text = "Soda";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += label1_Click;
             // 
-            // waterButton
+            // button6
             // 
-            waterButton.Location = new Point(500, 175);
-            waterButton.Name = "waterButton";
-            waterButton.Size = new Size(175, 175);
-            waterButton.TabIndex = 13;
-            waterButton.Text = "Water";
-            waterButton.UseVisualStyleBackColor = true;
-            waterButton.Click += label1_Click;
+            button6.Location = new Point(500, 175);
+            button6.Name = "button6";
+            button6.Size = new Size(175, 175);
+            button6.TabIndex = 13;
+            button6.Text = "Water";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += label1_Click;
             // 
-            // coffeeButton
+            // button8
             // 
-            coffeeButton.Location = new Point(500, 625);
-            coffeeButton.Name = "coffeeButton";
-            coffeeButton.Size = new Size(175, 175);
-            coffeeButton.TabIndex = 14;
-            coffeeButton.Text = "Coffee";
-            coffeeButton.UseVisualStyleBackColor = true;
-            coffeeButton.Click += label1_Click;
+            button8.Location = new Point(500, 625);
+            button8.Name = "button8";
+            button8.Size = new Size(175, 175);
+            button8.TabIndex = 14;
+            button8.Text = "Coffee";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += label1_Click;
             // 
-            // cookieButton
+            // button10
             // 
-            cookieButton.Location = new Point(725, 400);
-            cookieButton.Name = "cookieButton";
-            cookieButton.Size = new Size(175, 175);
-            cookieButton.TabIndex = 17;
-            cookieButton.Text = "Cookie";
-            cookieButton.UseVisualStyleBackColor = true;
-            cookieButton.Click += label1_Click;
+            button10.Location = new Point(725, 400);
+            button10.Name = "button10";
+            button10.Size = new Size(175, 175);
+            button10.TabIndex = 17;
+            button10.Text = "Cookie";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += label1_Click;
             // 
-            // iceButton
+            // button9
             // 
-            iceButton.Location = new Point(725, 175);
-            iceButton.Name = "iceButton";
-            iceButton.Size = new Size(175, 175);
-            iceButton.TabIndex = 15;
-            iceButton.Text = "Ice Cream";
-            iceButton.UseVisualStyleBackColor = true;
-            iceButton.Click += label1_Click;
+            button9.Location = new Point(725, 175);
+            button9.Name = "button9";
+            button9.Size = new Size(175, 175);
+            button9.TabIndex = 15;
+            button9.Text = "Ice Cream";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += label1_Click;
             // 
             // curOrder
             // 
@@ -247,31 +248,41 @@
             prevButton.Text = "Add Prev Order";
             prevButton.UseVisualStyleBackColor = true;
             // 
+            // priceLabel
+            // 
+            priceLabel.AutoSize = true;
+            priceLabel.Location = new Point(445, 950);
+            priceLabel.Name = "priceLabel";
+            priceLabel.Size = new Size(59, 25);
+            priceLabel.TabIndex = 22;
+            priceLabel.Text = "label6";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(978, 1570);
+            Controls.Add(priceLabel);
             Controls.Add(prevButton);
             Controls.Add(checkButton);
             Controls.Add(prevOrder);
             Controls.Add(curOrder);
-            Controls.Add(cookieButton);
-            Controls.Add(iceButton);
-            Controls.Add(coffeeButton);
-            Controls.Add(waterButton);
-            Controls.Add(sodaButton);
-            Controls.Add(appleButton);
-            Controls.Add(veggiesButton);
-            Controls.Add(friesButton);
-            Controls.Add(saladButton);
-            Controls.Add(pizzaButton);
+            Controls.Add(button10);
+            Controls.Add(button9);
+            Controls.Add(button8);
+            Controls.Add(button6);
+            Controls.Add(button7);
+            Controls.Add(button5);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(burgerButton);
+            Controls.Add(button0);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -280,25 +291,26 @@
 
         #endregion
 
-        private Button burgerButton;
+        private Button button0;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
-        private Button pizzaButton;
-        private Button saladButton;
-        private Button friesButton;
-        private Button veggiesButton;
-        private Button appleButton;
-        private Button sodaButton;
-        private Button waterButton;
-        private Button coffeeButton;
-        private Button cookieButton;
-        private Button iceButton;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private Button button5;
+        private Button button7;
+        private Button button6;
+        private Button button8;
+        private Button button10;
+        private Button button9;
         private ListBox curOrder;
         private ListBox prevOrder;
         private Button checkButton;
         private Button prevButton;
+        private Label priceLabel;
     }
 }

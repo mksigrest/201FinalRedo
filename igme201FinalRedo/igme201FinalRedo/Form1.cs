@@ -1,3 +1,5 @@
+using System.Reflection.Metadata.Ecma335;
+
 namespace igme201FinalRedo
 {
     public partial class Form1 : Form
@@ -19,12 +21,9 @@ namespace igme201FinalRedo
 
             if (sender is Button)
             {
-                string addText = button.Text;
-                curOrder.Items.Add(addText);
-
+                curOrder.Items.Add(new Food(button.Text, prices[buttonIndex], calories[buttonIndex]));
                 priceUpdate(1, buttonIndex);
             }
-
             else
             {
                 Console.WriteLine("Sender not a Button");
@@ -33,7 +32,6 @@ namespace igme201FinalRedo
 
         private void curOrder_Click(object sender, EventArgs e)
         {
-            
             curOrder.Items.RemoveAt(curOrder.SelectedIndex);
         }
 

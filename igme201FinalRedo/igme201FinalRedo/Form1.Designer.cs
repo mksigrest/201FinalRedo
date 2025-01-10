@@ -64,7 +64,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(135, 51);
+            label1.Location = new Point(260, 51);
             label1.Name = "label1";
             label1.Size = new Size(480, 38);
             label1.TabIndex = 1;
@@ -84,7 +84,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(50, 400);
+            label3.Location = new Point(275, 125);
             label3.Name = "label3";
             label3.Size = new Size(70, 32);
             label3.TabIndex = 3;
@@ -94,7 +94,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(50, 700);
+            label4.Location = new Point(500, 125);
             label4.Name = "label4";
             label4.Size = new Size(81, 32);
             label4.TabIndex = 4;
@@ -104,7 +104,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(50, 1000);
+            label5.Location = new Point(725, 125);
             label5.Name = "label5";
             label5.Size = new Size(103, 32);
             label5.TabIndex = 5;
@@ -112,7 +112,7 @@
             // 
             // pizzaButton
             // 
-            pizzaButton.Location = new Point(275, 175);
+            pizzaButton.Location = new Point(50, 400);
             pizzaButton.Name = "pizzaButton";
             pizzaButton.Size = new Size(175, 175);
             pizzaButton.TabIndex = 6;
@@ -122,7 +122,7 @@
             // 
             // saladButton
             // 
-            saladButton.Location = new Point(500, 175);
+            saladButton.Location = new Point(50, 625);
             saladButton.Name = "saladButton";
             saladButton.Size = new Size(175, 175);
             saladButton.TabIndex = 7;
@@ -132,7 +132,7 @@
             // 
             // friesButton
             // 
-            friesButton.Location = new Point(50, 450);
+            friesButton.Location = new Point(275, 175);
             friesButton.Name = "friesButton";
             friesButton.Size = new Size(175, 175);
             friesButton.TabIndex = 8;
@@ -142,7 +142,7 @@
             // 
             // veggiesButton
             // 
-            veggiesButton.Location = new Point(275, 450);
+            veggiesButton.Location = new Point(275, 400);
             veggiesButton.Name = "veggiesButton";
             veggiesButton.Size = new Size(175, 175);
             veggiesButton.TabIndex = 9;
@@ -152,7 +152,7 @@
             // 
             // appleButton
             // 
-            appleButton.Location = new Point(500, 450);
+            appleButton.Location = new Point(275, 625);
             appleButton.Name = "appleButton";
             appleButton.Size = new Size(175, 175);
             appleButton.TabIndex = 10;
@@ -162,7 +162,7 @@
             // 
             // sodaButton
             // 
-            sodaButton.Location = new Point(50, 750);
+            sodaButton.Location = new Point(500, 400);
             sodaButton.Name = "sodaButton";
             sodaButton.Size = new Size(175, 175);
             sodaButton.TabIndex = 12;
@@ -172,7 +172,7 @@
             // 
             // waterButton
             // 
-            waterButton.Location = new Point(275, 750);
+            waterButton.Location = new Point(500, 175);
             waterButton.Name = "waterButton";
             waterButton.Size = new Size(175, 175);
             waterButton.TabIndex = 13;
@@ -182,7 +182,7 @@
             // 
             // coffeeButton
             // 
-            coffeeButton.Location = new Point(500, 750);
+            coffeeButton.Location = new Point(500, 625);
             coffeeButton.Name = "coffeeButton";
             coffeeButton.Size = new Size(175, 175);
             coffeeButton.TabIndex = 14;
@@ -192,7 +192,7 @@
             // 
             // cookieButton
             // 
-            cookieButton.Location = new Point(275, 1050);
+            cookieButton.Location = new Point(725, 400);
             cookieButton.Name = "cookieButton";
             cookieButton.Size = new Size(175, 175);
             cookieButton.TabIndex = 17;
@@ -202,7 +202,7 @@
             // 
             // iceButton
             // 
-            iceButton.Location = new Point(50, 1050);
+            iceButton.Location = new Point(725, 175);
             iceButton.Name = "iceButton";
             iceButton.Size = new Size(175, 175);
             iceButton.TabIndex = 15;
@@ -214,9 +214,9 @@
             // 
             curOrder.FormattingEnabled = true;
             curOrder.ItemHeight = 25;
-            curOrder.Location = new Point(50, 1300);
+            curOrder.Location = new Point(225, 1300);
             curOrder.Name = "curOrder";
-            curOrder.Size = new Size(250, 129);
+            curOrder.Size = new Size(225, 129);
             curOrder.TabIndex = 18;
             curOrder.Click += curOrder_Click;
             // 
@@ -224,14 +224,14 @@
             // 
             prevOrder.FormattingEnabled = true;
             prevOrder.ItemHeight = 25;
-            prevOrder.Location = new Point(425, 1300);
+            prevOrder.Location = new Point(500, 1300);
             prevOrder.Name = "prevOrder";
-            prevOrder.Size = new Size(250, 129);
+            prevOrder.Size = new Size(225, 129);
             prevOrder.TabIndex = 19;
             // 
             // checkButton
             // 
-            checkButton.Location = new Point(100, 1445);
+            checkButton.Location = new Point(260, 1500);
             checkButton.Name = "checkButton";
             checkButton.Size = new Size(150, 50);
             checkButton.TabIndex = 20;
@@ -240,7 +240,7 @@
             // 
             // prevButton
             // 
-            prevButton.Location = new Point(475, 1445);
+            prevButton.Location = new Point(525, 1500);
             prevButton.Name = "prevButton";
             prevButton.Size = new Size(150, 50);
             prevButton.TabIndex = 21;
@@ -251,7 +251,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(728, 1570);
+            ClientSize = new Size(978, 1570);
             Controls.Add(prevButton);
             Controls.Add(checkButton);
             Controls.Add(prevOrder);

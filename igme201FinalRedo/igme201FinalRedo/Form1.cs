@@ -19,15 +19,8 @@ namespace igme201FinalRedo
             string buttonName = button.Name.Substring(button.Name.IndexOf("ton") + 3);
             int buttonIndex = int.Parse(buttonName);
 
-            if (sender is Button)
-            {
-                curOrder.Items.Add(new Food(button.Text, prices[buttonIndex], calories[buttonIndex]));
-                priceUpdate(1, buttonIndex);
-            }
-            else
-            {
-                Console.WriteLine("Sender not a Button");
-            }
+            curOrder.Items.Add(new Food(button.Text, prices[buttonIndex], calories[buttonIndex]));
+            priceUpdate(1, buttonIndex);
         }
 
         private void curOrder_Click(object sender, EventArgs e)

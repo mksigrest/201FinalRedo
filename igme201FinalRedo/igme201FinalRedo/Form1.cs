@@ -35,7 +35,7 @@ namespace igme201FinalRedo
                 totalPrice += prices[priceIndex];
                 Console.WriteLine(priceIndex);
                 Console.WriteLine(totalPrice);
-                priceLabel.Text = $"${totalPrice}";
+                priceLabel.Text = $"Total: ${totalPrice}";
             }
 
             else if(addSub == 0)

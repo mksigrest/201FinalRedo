@@ -49,6 +49,8 @@
             checkButton = new Button();
             prevButton = new Button();
             priceLabel = new Label();
+            textBox1 = new TextBox();
+            label6 = new Label();
             SuspendLayout();
             // 
             // button0
@@ -215,9 +217,9 @@
             // 
             curOrder.FormattingEnabled = true;
             curOrder.ItemHeight = 25;
-            curOrder.Location = new Point(225, 1300);
+            curOrder.Location = new Point(50, 975);
             curOrder.Name = "curOrder";
-            curOrder.Size = new Size(225, 129);
+            curOrder.Size = new Size(400, 129);
             curOrder.TabIndex = 18;
             curOrder.Click += curOrder_Click;
             // 
@@ -225,14 +227,14 @@
             // 
             prevOrder.FormattingEnabled = true;
             prevOrder.ItemHeight = 25;
-            prevOrder.Location = new Point(500, 1300);
+            prevOrder.Location = new Point(500, 975);
             prevOrder.Name = "prevOrder";
-            prevOrder.Size = new Size(225, 129);
+            prevOrder.Size = new Size(400, 129);
             prevOrder.TabIndex = 19;
             // 
             // checkButton
             // 
-            checkButton.Location = new Point(260, 1500);
+            checkButton.Location = new Point(260, 1125);
             checkButton.Name = "checkButton";
             checkButton.Size = new Size(150, 50);
             checkButton.TabIndex = 20;
@@ -241,7 +243,7 @@
             // 
             // prevButton
             // 
-            prevButton.Location = new Point(525, 1500);
+            prevButton.Location = new Point(525, 1125);
             prevButton.Name = "prevButton";
             prevButton.Size = new Size(150, 50);
             prevButton.TabIndex = 21;
@@ -251,17 +253,38 @@
             // priceLabel
             // 
             priceLabel.AutoSize = true;
-            priceLabel.Location = new Point(445, 950);
+            priceLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            priceLabel.Location = new Point(50, 905);
             priceLabel.Name = "priceLabel";
-            priceLabel.Size = new Size(59, 25);
+            priceLabel.Size = new Size(84, 32);
             priceLabel.TabIndex = 22;
-            priceLabel.Text = "label6";
+            priceLabel.Text = "Total: ";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(500, 908);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(150, 31);
+            textBox1.TabIndex = 23;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(500, 843);
+            label6.Name = "label6";
+            label6.Size = new Size(204, 32);
+            label6.TabIndex = 24;
+            label6.Text = "Input Username:";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(978, 1570);
+            BackColor = SystemColors.ActiveBorder;
+            ClientSize = new Size(978, 1194);
+            Controls.Add(label6);
+            Controls.Add(textBox1);
             Controls.Add(priceLabel);
             Controls.Add(prevButton);
             Controls.Add(checkButton);
@@ -312,5 +335,7 @@
         private Button checkButton;
         private Button prevButton;
         private Label priceLabel;
+        private TextBox textBox1;
+        private Label label6;
     }
 }

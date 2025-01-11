@@ -25,7 +25,16 @@ namespace igme201FinalRedo
 
         private void curOrder_Click(object sender, EventArgs e)
         {
-            curOrder.Items.RemoveAt(curOrder.SelectedIndex);
+            if (curOrder.SelectedIndex != -1)
+            {
+                // Get the selected item's price
+                Food selectedFood = curOrder.SelectedItem as Food;
+                int priceIndex = Array.IndexOf(prices, selectedFood.Price);
+
+                // Remove the selected item and update the price
+                curOrder.Items.RemoveAt(curOrder.SelectedIndex);
+                priceUpdate(0, priceIndex);
+            }
         }
 
         public void priceUpdate(int addSub, int priceIndex)
@@ -33,14 +42,13 @@ namespace igme201FinalRedo
             if (addSub == 1)
             {
                 totalPrice += prices[priceIndex];
-                Console.WriteLine(priceIndex);
-                Console.WriteLine(totalPrice);
                 priceLabel.Text = $"Total: ${totalPrice}";
             }
 
             else if(addSub == 0)
             {
-
+                totalPrice -= prices[priceIndex];
+                priceLabel.Text = $"Total: ${totalPrice}";
             }
         }
     }

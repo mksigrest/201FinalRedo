@@ -1,4 +1,6 @@
 using System.Reflection.Metadata.Ecma335;
+using System.IO;
+using System.Text.Json;
 
 namespace igme201FinalRedo
 {
@@ -10,8 +12,9 @@ namespace igme201FinalRedo
         }
 
         double totalPrice = 0;
-        double[] prices = {2.25, 7.75, 8.50, 3.00, 1.50, 2.00, 0.00, 2.00, 1.50, 3.50, 1.25 };
-        int[] calories = {354, 303, 100, 365, 59, 95, 0, 150, 1, 137, 142};
+        double[] prices = { 2.25, 7.75, 8.50, 3.00, 1.50, 2.00, 0.00, 2.00, 1.50, 3.50, 1.25 };
+        int[] calories = { 354, 303, 100, 365, 59, 95, 0, 150, 1, 137, 142 };
+        string[] users = { };
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -27,13 +30,31 @@ namespace igme201FinalRedo
         {
             if (curOrder.SelectedIndex != -1)
             {
-                // Get the selected item's price
                 Food selectedFood = curOrder.SelectedItem as Food;
                 int priceIndex = Array.IndexOf(prices, selectedFood.Price);
 
-                // Remove the selected item and update the price
                 curOrder.Items.RemoveAt(curOrder.SelectedIndex);
                 priceUpdate(0, priceIndex);
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            string user = textBox1.Text;
+
+            if (string.IsNullOrWhiteSpace(user))
+            {
+                textBox1.Text = "Enter Username";
+            }
+
+            else if (users.Contains(user))
+            {
+
+            }
+
+            else
+            {
+
             }
         }
 
@@ -45,7 +66,7 @@ namespace igme201FinalRedo
                 priceLabel.Text = $"Total: ${totalPrice}";
             }
 
-            else if(addSub == 0)
+            else if (addSub == 0)
             {
                 totalPrice -= prices[priceIndex];
                 priceLabel.Text = $"Total: ${totalPrice}";

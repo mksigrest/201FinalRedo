@@ -51,6 +51,7 @@
             priceLabel = new Label();
             textBox1 = new TextBox();
             label6 = new Label();
+            button11 = new Button();
             SuspendLayout();
             // 
             // button0
@@ -262,7 +263,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(500, 908);
+            textBox1.Location = new Point(500, 900);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(150, 31);
             textBox1.TabIndex = 23;
@@ -271,11 +272,21 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(500, 843);
+            label6.Location = new Point(500, 837);
             label6.Name = "label6";
             label6.Size = new Size(204, 32);
             label6.TabIndex = 24;
             label6.Text = "Input Username:";
+            // 
+            // button11
+            // 
+            button11.Location = new Point(750, 900);
+            button11.Name = "button11";
+            button11.Size = new Size(150, 31);
+            button11.TabIndex = 25;
+            button11.Text = "Sign In/Up";
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
             // 
             // Form1
             // 
@@ -283,6 +294,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(978, 1194);
+            Controls.Add(button11);
             Controls.Add(label6);
             Controls.Add(textBox1);
             Controls.Add(priceLabel);
@@ -337,5 +349,6 @@
         private Label priceLabel;
         private TextBox textBox1;
         private Label label6;
+        private Button button11;
     }
 }

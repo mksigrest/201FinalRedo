@@ -7,12 +7,12 @@ namespace igme201FinalRedo
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1() //loads the previous users and all components in the form
         {
             InitializeComponent();
             LoadUsers();
         }
-
+         //creates a dictionary to store users and their last orders
         Dictionary<string, List<Food>> users = new Dictionary<string, List<Food>>();
 
         bool loggedIn = false;
@@ -21,6 +21,7 @@ namespace igme201FinalRedo
         int[] calories = { 354, 303, 100, 365, 59, 95, 0, 150, 1, 137, 142 };
         int[] ounces = {0,0,0,0,0,0, 17, 12, 8 };
 
+        //adds items to curOrder list box when selected
         private void label1_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
@@ -40,6 +41,7 @@ namespace igme201FinalRedo
             }
         }
 
+        //Removes items and their cost when clicking on Curorder listbox
         private void curOrder_Click(object sender, EventArgs e)
         {
             if (curOrder.SelectedIndex != -1)
@@ -52,6 +54,7 @@ namespace igme201FinalRedo
             }
         }
 
+        //controls the naming in the textbox
         private void button11_Click(object sender, EventArgs e)
         {
             string user = textBox1.Text;
@@ -78,6 +81,8 @@ namespace igme201FinalRedo
                 users[user] = new List<Food>();
             }
         }
+
+        //checks out the items in the curOrder list box, clears them, and saves it to the current users dictionary
         private void checkButton_Click(object sender, EventArgs e)
         {
             if (loggedIn == true)
@@ -112,6 +117,7 @@ namespace igme201FinalRedo
             }
         }
 
+        //adds the items in the prevOrder list box to the curOrder list box, along with the prices
         private void prevButton_Click(object sender, EventArgs e)
         {
             string user = textBox1.Text;
@@ -125,6 +131,7 @@ namespace igme201FinalRedo
             }
         }
 
+        //Price update function that will remove or add price based on 0 or 1 value
         public void priceUpdate(int addSub, int priceIndex)
         {
             if (addSub == 1)
@@ -140,13 +147,14 @@ namespace igme201FinalRedo
             }
         }
 
+        //loads the current users into the users dictionary reads to use when applies
         public void LoadUsers()
         {
             string filePath = "users.txt";
 
             if (File.Exists(filePath))
             {
-                try
+                try //try catch block
                 {
                     using (StreamReader reader = new StreamReader(filePath))
                     {
@@ -166,7 +174,7 @@ namespace igme201FinalRedo
                                 users[currentUser] = new List<Food>();
                             }
 
-                            else
+                            else //checks if parses match predetermined ones
                             {
                                 string[] parts = line.Split('|');
                                 if (parts.Length == 3 && double.TryParse(parts[1], out double price) && int.TryParse(parts[2], out int calories))

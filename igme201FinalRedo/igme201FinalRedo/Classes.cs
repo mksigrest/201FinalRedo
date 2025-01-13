@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace igme201FinalRedo
 {
-    public class Food
+    public class Food //class food that has price and calories. Called and prints out value in textBox
     {
         public string Name {get; set;}
         public double Price {get; set;}
@@ -25,7 +25,7 @@ namespace igme201FinalRedo
         }
     }
 
-    public class Drink : Food
+    public class Drink : Food //child class drink that has price, calories, and ounces. Called for specifically drinks and prints values in textbox
     {
         public int Ounces {get; set;}
 

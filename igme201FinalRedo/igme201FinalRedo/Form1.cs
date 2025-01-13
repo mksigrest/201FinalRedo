@@ -1,6 +1,7 @@
 using System.Reflection.Metadata.Ecma335;
 using System.IO;
 using System.Text.Json;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace igme201FinalRedo
 {
@@ -98,6 +99,17 @@ namespace igme201FinalRedo
                         writer.WriteLine("END");
                     }
                 }
+            }
+        }
+
+        private void prevButton_Click(object sender, EventArgs e)
+        {
+            string user = textBox1.Text;
+
+            curOrder.Items.Clear();
+            foreach (var food in users[user])
+            {
+                curOrder.Items.Add(food);
             }
         }
 

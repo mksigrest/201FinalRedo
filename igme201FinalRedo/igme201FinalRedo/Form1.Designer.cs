@@ -56,6 +56,7 @@
             // 
             // button0
             // 
+            button0.Image = Properties.Resources.Burger;
             button0.Location = new Point(50, 175);
             button0.Name = "button0";
             button0.Size = new Size(175, 175);
@@ -117,6 +118,7 @@
             // 
             // button1
             // 
+            button1.Image = Properties.Resources.Pizza;
             button1.Location = new Point(50, 400);
             button1.Name = "button1";
             button1.Size = new Size(175, 175);
@@ -128,6 +130,7 @@
             // 
             // button2
             // 
+            button2.Image = Properties.Resources.Salad;
             button2.Location = new Point(50, 625);
             button2.Name = "button2";
             button2.Size = new Size(175, 175);
@@ -139,6 +142,7 @@
             // 
             // button3
             // 
+            button3.Image = Properties.Resources.Fries;
             button3.Location = new Point(275, 175);
             button3.Name = "button3";
             button3.Size = new Size(175, 175);
@@ -150,6 +154,7 @@
             // 
             // button4
             // 
+            button4.Image = Properties.Resources.Veggies;
             button4.Location = new Point(275, 400);
             button4.Name = "button4";
             button4.Size = new Size(175, 175);
@@ -161,6 +166,7 @@
             // 
             // button5
             // 
+            button5.Image = Properties.Resources.Apples;
             button5.Location = new Point(275, 625);
             button5.Name = "button5";
             button5.Size = new Size(175, 175);
@@ -172,6 +178,7 @@
             // 
             // button7
             // 
+            button7.Image = Properties.Resources.Soda;
             button7.Location = new Point(500, 400);
             button7.Name = "button7";
             button7.Size = new Size(175, 175);
@@ -183,6 +190,7 @@
             // 
             // button6
             // 
+            button6.Image = Properties.Resources.Water;
             button6.Location = new Point(500, 175);
             button6.Name = "button6";
             button6.Size = new Size(175, 175);
@@ -194,6 +202,7 @@
             // 
             // button8
             // 
+            button8.Image = Properties.Resources.Coffee;
             button8.Location = new Point(500, 625);
             button8.Name = "button8";
             button8.Size = new Size(175, 175);
@@ -205,6 +214,7 @@
             // 
             // button10
             // 
+            button10.Image = Properties.Resources.Cookie;
             button10.Location = new Point(725, 400);
             button10.Name = "button10";
             button10.Size = new Size(175, 175);
@@ -216,6 +226,7 @@
             // 
             // button9
             // 
+            button9.Image = Properties.Resources.Icecream;
             button9.Location = new Point(725, 175);
             button9.Name = "button9";
             button9.Size = new Size(175, 175);

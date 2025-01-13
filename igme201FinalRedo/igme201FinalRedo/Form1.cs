@@ -9,13 +9,15 @@ namespace igme201FinalRedo
         public Form1()
         {
             InitializeComponent();
+            LoadUsers();
         }
+
+        Dictionary<string, List<Food>> users = new Dictionary<string, List<Food>>();
 
         bool loggedIn = false;
         double totalPrice = 0;
         double[] prices = { 2.25, 7.75, 8.50, 3.00, 1.50, 2.00, 0.00, 2.00, 1.50, 3.50, 1.25 };
         int[] calories = { 354, 303, 100, 365, 59, 95, 0, 150, 1, 137, 142 };
-        List<string> users = new List<string>();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -49,23 +51,53 @@ namespace igme201FinalRedo
                 loggedIn = false;
             }
 
-            else if (users.Contains(user))
+            else if (users.ContainsKey(user))
             {
                 loggedIn = true;
-                //add in code here that applys the preOrder list box and makes it the users last order when checked out
+                prevOrder.Items.Clear();
+                foreach (var food in users[user])
+                {
+                    prevOrder.Items.Add(food);
+                }
             }
 
             else
             {
                 loggedIn = true;
-                //add in code here that will save the users order when checking out, and apply it to the prevOrder list box
+                users[user] = new List<Food>();
             }
         }
         private void checkButton_Click(object sender, EventArgs e)
         {
             if (loggedIn == true)
             {
+                string user = textBox1.Text;
+
+                if (users.ContainsKey(user))
+                {
+                    users[user] = curOrder.Items.Cast<Food>().ToList();
+                }
+
                 MessageBox.Show($"Succesful Check out. Total is $" + totalPrice);
+                curOrder.Items.Clear();
+                totalPrice = 0;
+                priceLabel.Text = $"Total: ${totalPrice}";
+
+                string filePath = "users.txt";
+
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    foreach (var user1 in users)
+                    {
+                        writer.WriteLine(user1.Key);
+                        foreach (var food in user1.Value)
+                        {
+                            writer.WriteLine($"{food.Name}|{food.Price}|{food.Cals}");
+                        }
+
+                        writer.WriteLine("END");
+                    }
+                }
             }
         }
 
@@ -81,6 +113,39 @@ namespace igme201FinalRedo
             {
                 totalPrice -= prices[priceIndex];
                 priceLabel.Text = $"Total: ${totalPrice}";
+            }
+        }
+
+        public void LoadUsers()
+        {
+            string filePath = "users.txt";
+
+            if (File.Exists(filePath))
+            {
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    string line;
+                    string currentUser = null;
+
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        if (line == "END")
+                        {
+                            currentUser = null;
+                        }
+
+                        else if (currentUser == null)
+                        {
+                            currentUser = line;
+                            users[currentUser] = new List<Food>();
+                        }
+
+                        else
+                        {
+
+                        }
+                    }
+                }
             }
         }
     }

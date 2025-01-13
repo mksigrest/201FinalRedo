@@ -151,7 +151,7 @@
             button3.Size = new Size(175, 175);
             button3.TabIndex = 8;
             button3.Tag = 3;
-            button3.Text = "Fried";
+            button3.Text = "Fries";
             button3.TextImageRelation = TextImageRelation.ImageAboveText;
             button3.UseVisualStyleBackColor = true;
             button3.Click += label1_Click;

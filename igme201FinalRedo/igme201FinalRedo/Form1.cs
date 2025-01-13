@@ -19,6 +19,7 @@ namespace igme201FinalRedo
         double totalPrice = 0;
         double[] prices = { 2.25, 7.75, 8.50, 3.00, 1.50, 2.00, 0.00, 2.00, 1.50, 3.50, 1.25 };
         int[] calories = { 354, 303, 100, 365, 59, 95, 0, 150, 1, 137, 142 };
+        int[] ounces = {0,0,0,0,0,0, 17, 12, 8 };
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -26,8 +27,17 @@ namespace igme201FinalRedo
             if (button == null || button.Tag == null) return;
             int buttonIndex = (int)button.Tag;
 
-            curOrder.Items.Add(new Food(button.Text, prices[buttonIndex], calories[buttonIndex]));
-            priceUpdate(1, buttonIndex);
+            if (buttonIndex != 6 && buttonIndex != 7 && buttonIndex != 8)
+            {
+                curOrder.Items.Add(new Food(button.Text, prices[buttonIndex], calories[buttonIndex]));
+                priceUpdate(1, buttonIndex);
+            }
+
+            else
+            {
+                curOrder.Items.Add(new Drink(button.Text, prices[buttonIndex], calories[buttonIndex], ounces[buttonIndex]));
+                priceUpdate(1, buttonIndex);
+            }
         }
 
         private void curOrder_Click(object sender, EventArgs e)

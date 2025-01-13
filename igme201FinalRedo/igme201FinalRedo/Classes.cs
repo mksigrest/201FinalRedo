@@ -36,7 +36,7 @@ namespace igme201FinalRedo
 
         public override string ToString()
         {
-            return $"Drink: {Name} - ${Price:F2}, {Ounces}oz";
+            return $"Drink: {Name} - ${Price:F2}, {Cals} calories, {Ounces}oz";
         }
     }
 }

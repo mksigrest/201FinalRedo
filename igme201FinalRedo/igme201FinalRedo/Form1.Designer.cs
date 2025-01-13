@@ -62,6 +62,8 @@
             button0.Size = new Size(175, 175);
             button0.TabIndex = 0;
             button0.Tag = 0;
+            button0.Text = "Burger";
+            button0.TextImageRelation = TextImageRelation.ImageAboveText;
             button0.UseVisualStyleBackColor = true;
             button0.Click += label1_Click;
             // 
@@ -123,6 +125,8 @@
             button1.Size = new Size(175, 175);
             button1.TabIndex = 6;
             button1.Tag = 1;
+            button1.Text = "Pizza";
+            button1.TextImageRelation = TextImageRelation.ImageAboveText;
             button1.UseVisualStyleBackColor = true;
             button1.Click += label1_Click;
             // 
@@ -134,6 +138,8 @@
             button2.Size = new Size(175, 175);
             button2.TabIndex = 7;
             button2.Tag = 2;
+            button2.Text = "Salad";
+            button2.TextImageRelation = TextImageRelation.ImageAboveText;
             button2.UseVisualStyleBackColor = true;
             button2.Click += label1_Click;
             // 
@@ -145,6 +151,8 @@
             button3.Size = new Size(175, 175);
             button3.TabIndex = 8;
             button3.Tag = 3;
+            button3.Text = "Fried";
+            button3.TextImageRelation = TextImageRelation.ImageAboveText;
             button3.UseVisualStyleBackColor = true;
             button3.Click += label1_Click;
             // 
@@ -156,6 +164,8 @@
             button4.Size = new Size(175, 175);
             button4.TabIndex = 9;
             button4.Tag = 4;
+            button4.Text = "Veggies";
+            button4.TextImageRelation = TextImageRelation.ImageAboveText;
             button4.UseVisualStyleBackColor = true;
             button4.Click += label1_Click;
             // 
@@ -167,6 +177,8 @@
             button5.Size = new Size(175, 175);
             button5.TabIndex = 10;
             button5.Tag = 5;
+            button5.Text = "Apple Slices";
+            button5.TextImageRelation = TextImageRelation.ImageAboveText;
             button5.UseVisualStyleBackColor = true;
             button5.Click += label1_Click;
             // 
@@ -178,6 +190,8 @@
             button7.Size = new Size(175, 175);
             button7.TabIndex = 12;
             button7.Tag = 7;
+            button7.Text = "Soda";
+            button7.TextImageRelation = TextImageRelation.ImageAboveText;
             button7.UseVisualStyleBackColor = true;
             button7.Click += label1_Click;
             // 
@@ -189,6 +203,8 @@
             button6.Size = new Size(175, 175);
             button6.TabIndex = 13;
             button6.Tag = 6;
+            button6.Text = "Water";
+            button6.TextImageRelation = TextImageRelation.ImageAboveText;
             button6.UseVisualStyleBackColor = true;
             button6.Click += label1_Click;
             // 
@@ -200,6 +216,8 @@
             button8.Size = new Size(175, 175);
             button8.TabIndex = 14;
             button8.Tag = 8;
+            button8.Text = "Coffee";
+            button8.TextImageRelation = TextImageRelation.ImageAboveText;
             button8.UseVisualStyleBackColor = true;
             button8.Click += label1_Click;
             // 
@@ -211,6 +229,8 @@
             button10.Size = new Size(175, 175);
             button10.TabIndex = 17;
             button10.Tag = 10;
+            button10.Text = "Cookie";
+            button10.TextImageRelation = TextImageRelation.ImageAboveText;
             button10.UseVisualStyleBackColor = true;
             button10.Click += label1_Click;
             // 
@@ -222,6 +242,8 @@
             button9.Size = new Size(175, 175);
             button9.TabIndex = 15;
             button9.Tag = 9;
+            button9.Text = "Ice Cream";
+            button9.TextImageRelation = TextImageRelation.ImageAboveText;
             button9.UseVisualStyleBackColor = true;
             button9.Click += label1_Click;
             // 

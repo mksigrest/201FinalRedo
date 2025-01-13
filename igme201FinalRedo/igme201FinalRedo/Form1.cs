@@ -11,6 +11,7 @@ namespace igme201FinalRedo
             InitializeComponent();
         }
 
+        bool loggedIn = false;
         double totalPrice = 0;
         double[] prices = { 2.25, 7.75, 8.50, 3.00, 1.50, 2.00, 0.00, 2.00, 1.50, 3.50, 1.25 };
         int[] calories = { 354, 303, 100, 365, 59, 95, 0, 150, 1, 137, 142 };
@@ -19,8 +20,8 @@ namespace igme201FinalRedo
         private void label1_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
-            string buttonName = button.Name.Substring(button.Name.IndexOf("ton") + 3);
-            int buttonIndex = int.Parse(buttonName);
+            if (button == null || button.Tag == null) return;
+            int buttonIndex = (int)button.Tag;
 
             curOrder.Items.Add(new Food(button.Text, prices[buttonIndex], calories[buttonIndex]));
             priceUpdate(1, buttonIndex);
@@ -45,16 +46,26 @@ namespace igme201FinalRedo
             if (string.IsNullOrWhiteSpace(user))
             {
                 textBox1.Text = "Enter Username";
+                loggedIn = false;
             }
 
             else if (users.Contains(user))
             {
-                load(user);
+                loggedIn = true;
+                //add in code here that applys the preOrder list box and makes it the users last order when checked out
             }
 
             else
             {
-                save(user);
+                loggedIn = true;
+                //add in code here that will save the users order when checking out, and apply it to the prevOrder list box
+            }
+        }
+        private void checkButton_Click(object sender, EventArgs e)
+        {
+            if (loggedIn == true)
+            {
+                MessageBox.Show($"Succesful Check out. Total is $" + totalPrice);
             }
         }
 
@@ -70,51 +81,6 @@ namespace igme201FinalRedo
             {
                 totalPrice -= prices[priceIndex];
                 priceLabel.Text = $"Total: ${totalPrice}";
-            }
-        }
-
-        public void save(string username)
-        {
-            string filePath = $"{username}_order.txt";
-
-            using (StreamWriter sw = new StreamWriter(filePath))
-            {
-                foreach (Food item in curOrder.Items)
-                {
-                    sw.WriteLine($"{item.Name},{item.Price},{item.Cals}");
-                }
-            }
-
-            textBox1.Text = $"Order saved for {username}";
-        }
-
-        public void load(string username)
-        {
-            string filePath = $"{username}_order.txt";
-
-            if (File.Exists(filePath))
-            {
-                prevOrder.Items.Clear();
-
-                string[] orderLines = File.ReadAllLines(filePath);
-                foreach (string line in orderLines)
-                {
-                    string[] parts = line.Split(',');
-
-                    if (parts.Length == 3 &&
-                        double.TryParse(parts[1], out double price) &&
-                        int.TryParse(parts[2], out int calories))
-                    {
-                        Food food = new Food(parts[0], price, calories);
-                        prevOrder.Items.Add(food);
-                    }
-                }
-
-                textBox1.Text = $"Order loaded for {username}";
-            }
-            else
-            {
-                textBox1.Text = "No saved order found for this user";
             }
         }
     }

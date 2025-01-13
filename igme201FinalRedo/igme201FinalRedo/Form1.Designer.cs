@@ -63,6 +63,7 @@
             button0.Text = "Burger";
             button0.UseVisualStyleBackColor = true;
             button0.Click += label1_Click;
+            button0.Tag = 0;
             // 
             // label1
             // 
@@ -123,6 +124,7 @@
             button1.Text = "Pizza";
             button1.UseVisualStyleBackColor = true;
             button1.Click += label1_Click;
+            button1.Tag = 1;
             // 
             // button2
             // 
@@ -133,6 +135,7 @@
             button2.Text = "Salad";
             button2.UseVisualStyleBackColor = true;
             button2.Click += label1_Click;
+            button2.Tag = 2;
             // 
             // button3
             // 
@@ -143,6 +146,7 @@
             button3.Text = "Fries";
             button3.UseVisualStyleBackColor = true;
             button3.Click += label1_Click;
+            button3.Tag = 3;
             // 
             // button4
             // 
@@ -153,6 +157,7 @@
             button4.Text = "Steamed Veggies";
             button4.UseVisualStyleBackColor = true;
             button4.Click += label1_Click;
+            button4.Tag = 4;
             // 
             // button5
             // 
@@ -163,6 +168,7 @@
             button5.Text = "Apple Slices";
             button5.UseVisualStyleBackColor = true;
             button5.Click += label1_Click;
+            button5.Tag = 5;
             // 
             // button7
             // 
@@ -173,6 +179,7 @@
             button7.Text = "Soda";
             button7.UseVisualStyleBackColor = true;
             button7.Click += label1_Click;
+            button7.Tag = 7;
             // 
             // button6
             // 
@@ -183,6 +190,7 @@
             button6.Text = "Water";
             button6.UseVisualStyleBackColor = true;
             button6.Click += label1_Click;
+            button6.Tag = 6;
             // 
             // button8
             // 
@@ -193,6 +201,7 @@
             button8.Text = "Coffee";
             button8.UseVisualStyleBackColor = true;
             button8.Click += label1_Click;
+            button8.Tag = 8;
             // 
             // button10
             // 
@@ -203,6 +212,7 @@
             button10.Text = "Cookie";
             button10.UseVisualStyleBackColor = true;
             button10.Click += label1_Click;
+            button10.Tag = 10;
             // 
             // button9
             // 
@@ -213,6 +223,7 @@
             button9.Text = "Ice Cream";
             button9.UseVisualStyleBackColor = true;
             button9.Click += label1_Click;
+            button9.Tag = 9;
             // 
             // curOrder
             // 
@@ -241,6 +252,7 @@
             checkButton.TabIndex = 20;
             checkButton.Text = "checkout";
             checkButton.UseVisualStyleBackColor = true;
+            checkButton.Click += checkButton_Click;
             // 
             // prevButton
             // 

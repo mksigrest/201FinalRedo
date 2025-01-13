@@ -120,6 +120,8 @@ namespace igme201FinalRedo
             foreach (var food in users[user])
             {
                 curOrder.Items.Add(food);
+                int priceIndex = Array.IndexOf(prices, food.Price);
+                priceUpdate(1, priceIndex);
             }
         }
 
@@ -144,33 +146,41 @@ namespace igme201FinalRedo
 
             if (File.Exists(filePath))
             {
-                using (StreamReader reader = new StreamReader(filePath))
+                try
                 {
-                    string line;
-                    string currentUser = null;
-
-                    while ((line = reader.ReadLine()) != null)
+                    using (StreamReader reader = new StreamReader(filePath))
                     {
-                        if (line == "END")
-                        {
-                            currentUser = null;
-                        }
+                        string line;
+                        string currentUser = null;
 
-                        else if (currentUser == null)
+                        while ((line = reader.ReadLine()) != null)
                         {
-                            currentUser = line;
-                            users[currentUser] = new List<Food>();
-                        }
-
-                        else
-                        {
-                            string[] parts = line.Split('|');
-                            if (parts.Length == 3 && double.TryParse(parts[1], out double price) && int.TryParse(parts[2], out int calories))
+                            if (line == "END")
                             {
-                                users[currentUser].Add(new Food(parts[0], price, calories));
+                                currentUser = null;
+                            }
+
+                            else if (currentUser == null)
+                            {
+                                currentUser = line;
+                                users[currentUser] = new List<Food>();
+                            }
+
+                            else
+                            {
+                                string[] parts = line.Split('|');
+                                if (parts.Length == 3 && double.TryParse(parts[1], out double price) && int.TryParse(parts[2], out int calories))
+                                {
+                                    users[currentUser].Add(new Food(parts[0], price, calories));
+                                }
                             }
                         }
                     }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error Loading users: {ex.Message}");
                 }
             }
         }

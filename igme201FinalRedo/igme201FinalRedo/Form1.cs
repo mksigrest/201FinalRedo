@@ -142,7 +142,11 @@ namespace igme201FinalRedo
 
                         else
                         {
-
+                            string[] parts = line.Split('|');
+                            if (parts.Length == 3 && double.TryParse(parts[1], out double price) && int.TryParse(parts[2], out int calories))
+                            {
+                                users[currentUser].Add(new Food(parts[0], price, calories));
+                            }
                         }
                     }
                 }
